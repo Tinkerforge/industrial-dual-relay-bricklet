@@ -26,16 +26,12 @@
 
 #include "bricklib2/bootloader/bootloader.h"
 #include "bricklib2/hal/system_timer/system_timer.h"
-#include "bricklib2/hal/uartbb/uartbb.h"
 #include "communication.h"
 #include "relay.h"
 
 Relay relay;
 
 int main(void) {
-	uartbb_init();
-	uartbb_puts("Start Dual Relay V2 Bricklet\n\r");
-
 	relay_init(&relay);
 	communication_init();
 
