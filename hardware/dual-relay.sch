@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:tinkerforge
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -752,7 +751,7 @@ U 1 1 5A26D844
 P 7900 2050
 F 0 "Q1" H 8200 2100 50  0000 R CNN
 F 1 "SSM6N7002KFU" H 8650 2000 50  0000 R CNN
-F 2 "kicad-libraries:SOT563" H 8100 2150 50  0001 C CNN
+F 2 "kicad-libraries:SOT363" H 8100 2150 50  0001 C CNN
 F 3 "" H 7900 2050 50  0000 C CNN
 	1    7900 2050
 	1    0    0    -1  
@@ -763,7 +762,7 @@ U 2 1 5A26DA71
 P 7900 5000
 F 0 "Q1" H 8200 5050 50  0000 R CNN
 F 1 "SSM6N7002KFU" H 8650 4950 50  0000 R CNN
-F 2 "kicad-libraries:SOT563" H 8100 5100 50  0001 C CNN
+F 2 "kicad-libraries:SOT363" H 8100 5100 50  0001 C CNN
 F 3 "" H 7900 5000 50  0000 C CNN
 	2    7900 5000
 	1    0    0    -1  
