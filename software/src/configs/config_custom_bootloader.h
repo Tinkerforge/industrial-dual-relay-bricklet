@@ -1,8 +1,8 @@
-/* dual-relay-v2-bricklet
- * Copyright (C) 2017 Olaf Lüke <olaf@tinkerforge.com>
+/* industrial-dual-relay-bricklet
+ * Copyright (C) 2017-2018 Olaf Lüke <olaf@tinkerforge.com>
  *
  * config_custom_bootloader.h: Bootloader configurations for 
- *                             Dual Relay V2 Bricklet
+ *                             Industrial Dual Relay Bricklet
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public

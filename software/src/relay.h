@@ -1,5 +1,5 @@
-/* dual-relay-v2-bricklet
- * Copyright (C) 2017 Olaf Lüke <olaf@tinkerforge.com>
+/* industrial-dual-relay-bricklet
+ * Copyright (C) 2017-2018 Olaf Lüke <olaf@tinkerforge.com>
  *
  * relay.h: Relay driver
  *
