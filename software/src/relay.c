@@ -33,8 +33,8 @@ static inline uint32_t XMC_GPIO_GetOutputLevel(XMC_GPIO_PORT_t *const port, cons
 
 bool relay_get_state(const uint8_t relay) {
 	switch(relay) {
-		case 1: return XMC_GPIO_GetOutputLevel(RELAY1_PIN);
-		case 2: return XMC_GPIO_GetOutputLevel(RELAY2_PIN);
+		case 1: return XMC_GPIO_GetOutputLevel(RELAY0_PIN);
+		case 2: return XMC_GPIO_GetOutputLevel(RELAY1_PIN);
 		default: break; // Error?
 	}
 
@@ -43,8 +43,8 @@ bool relay_get_state(const uint8_t relay) {
 
 void relay_set_state(const uint8_t relay, const bool state) {
 	switch(relay) {
-		case 1: state ? XMC_GPIO_SetOutputHigh(RELAY1_PIN) : XMC_GPIO_SetOutputLow(RELAY1_PIN); break;
-		case 2: state ? XMC_GPIO_SetOutputHigh(RELAY2_PIN) : XMC_GPIO_SetOutputLow(RELAY2_PIN); break;
+		case 1: state ? XMC_GPIO_SetOutputHigh(RELAY0_PIN) : XMC_GPIO_SetOutputLow(RELAY0_PIN); break;
+		case 2: state ? XMC_GPIO_SetOutputHigh(RELAY1_PIN) : XMC_GPIO_SetOutputLow(RELAY1_PIN); break;
 		default: break; // Error?
 	}
 }
@@ -67,8 +67,8 @@ void relay_init(Relay *relay) {
 		.output_level = XMC_GPIO_OUTPUT_LEVEL_LOW,
 	};
 
+	XMC_GPIO_Init(RELAY0_PIN, &relay_gpio_config);
 	XMC_GPIO_Init(RELAY1_PIN, &relay_gpio_config);
-	XMC_GPIO_Init(RELAY2_PIN, &relay_gpio_config);
 
 	relay->monoflop_callback[0] = false;
 	relay->monoflop_callback[1] = false;

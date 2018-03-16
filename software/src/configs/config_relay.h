@@ -24,7 +24,7 @@
 
 #include "xmc_gpio.h"
 
+#define RELAY0_PIN P0_8
 #define RELAY1_PIN P0_7
-#define RELAY2_PIN P2_1
 
 #endif
