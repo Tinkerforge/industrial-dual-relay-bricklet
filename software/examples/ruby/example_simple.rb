@@ -2,16 +2,16 @@
 # -*- ruby encoding: utf-8 -*-
 
 require 'tinkerforge/ip_connection'
-require 'tinkerforge/bricklet_dual_relay_v2'
+require 'tinkerforge/bricklet_industrial_dual_relay'
 
 include Tinkerforge
 
 HOST = 'localhost'
 PORT = 4223
-UID = 'XYZ' # Change XYZ to the UID of your Dual Relay Bricklet 2.0
+UID = 'XYZ' # Change XYZ to the UID of your Industrial Dual Relay Bricklet
 
 ipcon = IPConnection.new # Create IP connection
-dr = BrickletDualRelayV2.new UID, ipcon # Create device object
+idr = BrickletIndustrialDualRelay.new UID, ipcon # Create device object
 
 ipcon.connect HOST, PORT # Connect to brickd
 # Don't use device before ipcon is connected
@@ -19,9 +19,9 @@ ipcon.connect HOST, PORT # Connect to brickd
 # Turn relays alternating on/off 10 times with 1 second delay
 for _ in 0..4
   sleep 1
-  dr.set_state true, false
+  idr.set_state true, false
   sleep 1
-  dr.set_state false, true
+  idr.set_state false, true
 end
 
 puts 'Press key to exit'

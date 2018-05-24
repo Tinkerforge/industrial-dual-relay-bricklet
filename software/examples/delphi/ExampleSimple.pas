@@ -4,13 +4,13 @@ program ExampleSimple;
 {$ifdef FPC}{$mode OBJFPC}{$H+}{$endif}
 
 uses
-  SysUtils, IPConnection, BrickletDualRelayV2;
+  SysUtils, IPConnection, BrickletIndustrialDualRelay;
 
 type
   TExample = class
   private
     ipcon: TIPConnection;
-    dr: TBrickletDualRelayV2;
+    idr: TBrickletIndustrialDualRelay;
   public
     procedure Execute;
   end;
@@ -18,7 +18,7 @@ type
 const
   HOST = 'localhost';
   PORT = 4223;
-  UID = 'XYZ'; { Change XYZ to the UID of your Dual Relay Bricklet 2.0 }
+  UID = 'XYZ'; { Change XYZ to the UID of your Industrial Dual Relay Bricklet }
 
 var
   e: TExample;
@@ -30,7 +30,7 @@ begin
   ipcon := TIPConnection.Create;
 
   { Create device object }
-  dr := TBrickletDualRelayV2.Create(UID, ipcon);
+  idr := TBrickletIndustrialDualRelay.Create(UID, ipcon);
 
   { Connect to brickd }
   ipcon.Connect(HOST, PORT);
@@ -39,9 +39,9 @@ begin
   { Turn relays alternating on/off 10 times with 1 second delay }
   for i := 0 to 4 do begin
     Sleep(1000);
-    dr.SetState(true, false);
+    idr.SetState(true, false);
     Sleep(1000);
-    dr.SetState(false, true);
+    idr.SetState(false, true);
   end;
 
   WriteLn('Press key to exit');

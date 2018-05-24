@@ -5,11 +5,11 @@ Imports Tinkerforge
 Module ExampleSimple
     Const HOST As String = "localhost"
     Const PORT As Integer = 4223
-    Const UID As String = "XYZ" ' Change XYZ to the UID of your Dual Relay Bricklet 2.0
+    Const UID As String = "XYZ" ' Change XYZ to the UID of your Industrial Dual Relay Bricklet
 
     Sub Main()
         Dim ipcon As New IPConnection() ' Create IP connection
-        Dim dr As New BrickletDualRelayV2(UID, ipcon) ' Create device object
+        Dim idr As New BrickletIndustrialDualRelay(UID, ipcon) ' Create device object
 
         ipcon.Connect(HOST, PORT) ' Connect to brickd
         ' Don't use device before ipcon is connected
@@ -18,9 +18,9 @@ Module ExampleSimple
         Dim i As Integer
         For i = 0 To 4
             Thread.Sleep(1000)
-            dr.SetState(True, False)
+            idr.SetState(True, False)
             Thread.Sleep(1000)
-            dr.SetState(False, True)
+            idr.SetState(False, True)
         Next i
 
         Console.WriteLine("Press key to exit")

@@ -6,12 +6,13 @@ class Example
 {
 	private static string HOST = "localhost";
 	private static int PORT = 4223;
-	private static string UID = "XYZ"; // Change XYZ to the UID of your Dual Relay Bricklet 2.0
+	private static string UID = "XYZ"; // Change XYZ to the UID of your Industrial Dual Relay Bricklet
 
 	static void Main()
 	{
 		IPConnection ipcon = new IPConnection(); // Create IP connection
-		BrickletDualRelayV2 dr = new BrickletDualRelayV2(UID, ipcon); // Create device object
+		BrickletIndustrialDualRelay idr =
+		  new BrickletIndustrialDualRelay(UID, ipcon); // Create device object
 
 		ipcon.Connect(HOST, PORT); // Connect to brickd
 		// Don't use device before ipcon is connected
@@ -20,9 +21,9 @@ class Example
 		for(int i = 0; i < 5; i++)
 		{
 			Thread.Sleep(1000);
-			dr.SetState(true, false);
+			idr.SetState(true, false);
 			Thread.Sleep(1000);
-			dr.SetState(false, true);
+			idr.SetState(false, true);
 		}
 
 		Console.WriteLine("Press enter to exit");

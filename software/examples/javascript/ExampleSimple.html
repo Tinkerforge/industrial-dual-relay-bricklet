@@ -6,7 +6,7 @@
     </head>
     <body>
         <div style="text-align:center;">
-            <h1>Dual Relay Bricklet 2.0 Simple Example</h1>
+            <h1>Industrial Dual Relay Bricklet Simple Example</h1>
             <p>
                 <input value="localhost" id="host" type="text" size="20">:
                 <input value="4280" id="port" type="text" size="5">,
@@ -31,7 +31,7 @@
                     ipcon.disconnect();
                 }
                 ipcon = new Tinkerforge.IPConnection(); // Create IP connection
-                var dr = new Tinkerforge.BrickletDualRelayV2(UID, ipcon); // Create device object
+                var idr = new Tinkerforge.BrickletIndustrialDualRelay(UID, ipcon); // Create device object
                 ipcon.connect(HOST, PORT,
                     function(error) {
                         textArea.value += 'Error: ' + error + '\n';
@@ -44,10 +44,10 @@
                         // Turn relays alternating on/off 10 times with 1 second delay
                         for(var i = 0; i < 5; ++i) {
                             setTimeout(function () {
-                                dr.setState(true, false);
+                                idr.setState(true, false);
                             }, 2000 * i + 1000);
                             setTimeout(function () {
-                                dr.setState(false, true);
+                                idr.setState(false, true);
                             }, 2000 * i + 2000);
                         }
                     }

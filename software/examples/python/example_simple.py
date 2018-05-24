@@ -3,16 +3,16 @@
 
 HOST = "localhost"
 PORT = 4223
-UID = "XYZ" # Change XYZ to the UID of your Dual Relay Bricklet 2.0
+UID = "XYZ" # Change XYZ to the UID of your Industrial Dual Relay Bricklet
 
 import time
 
 from tinkerforge.ip_connection import IPConnection
-from tinkerforge.bricklet_dual_relay_v2 import BrickletDualRelayV2
+from tinkerforge.bricklet_industrial_dual_relay import BrickletIndustrialDualRelay
 
 if __name__ == "__main__":
     ipcon = IPConnection() # Create IP connection
-    dr = BrickletDualRelayV2(UID, ipcon) # Create device object
+    idr = BrickletIndustrialDualRelay(UID, ipcon) # Create device object
 
     ipcon.connect(HOST, PORT) # Connect to brickd
     # Don't use device before ipcon is connected
@@ -20,9 +20,9 @@ if __name__ == "__main__":
     # Turn relays alternating on/off 10 times with 1 second delay
     for i in range(5):
         time.sleep(1)
-        dr.set_state(True, False)
+        idr.set_state(True, False)
         time.sleep(1)
-        dr.set_state(False, True)
+        idr.set_state(False, True)
 
     raw_input("Press key to exit\n") # Use input() in Python 3
     ipcon.disconnect()

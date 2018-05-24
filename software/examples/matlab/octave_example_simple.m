@@ -3,10 +3,10 @@ function octave_example_simple()
 
     HOST = "localhost";
     PORT = 4223;
-    UID = "XYZ"; % Change XYZ to the UID of your Dual Relay Bricklet 2.0
+    UID = "XYZ"; % Change XYZ to the UID of your Industrial Dual Relay Bricklet
 
     ipcon = javaObject("com.tinkerforge.IPConnection"); % Create IP connection
-    dr = javaObject("com.tinkerforge.BrickletDualRelayV2", UID, ipcon); % Create device object
+    idr = javaObject("com.tinkerforge.BrickletIndustrialDualRelay", UID, ipcon); % Create device object
 
     ipcon.connect(HOST, PORT); % Connect to brickd
     % Don't use device before ipcon is connected
@@ -14,9 +14,9 @@ function octave_example_simple()
     % Turn relays alternating on/off 10 times with 1 second delay
     for i = 0:4
         pause(1);
-        dr.setState(true, false);
+        idr.setState(true, false);
         pause(1);
-        dr.setState(false, true);
+        idr.setState(false, true);
     end
 
     input("Press key to exit\n", "s");
