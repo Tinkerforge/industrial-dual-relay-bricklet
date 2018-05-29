@@ -20,9 +20,9 @@ if __name__ == "__main__":
     # Turn relays alternating on/off 10 times with 1 second delay
     for i in range(5):
         time.sleep(1)
-        idr.set_state(True, False)
+        idr.set_value(True, False)
         time.sleep(1)
-        idr.set_state(False, True)
+        idr.set_value(False, True)
 
     raw_input("Press key to exit\n") # Use input() in Python 3
     ipcon.disconnect()

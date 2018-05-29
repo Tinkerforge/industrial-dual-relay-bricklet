@@ -21,9 +21,9 @@ public class ExampleSimple {
 		// Turn relays alternating on/off 10 times with 1 second delay
 		for(int i = 0; i < 5; i++) {
 			Thread.sleep(1000);
-			idr.setState(true, false);
+			idr.setValue(true, false);
 			Thread.sleep(1000);
-			idr.setState(false, true);
+			idr.setValue(false, true);
 		}
 
 		System.out.println("Press key to exit"); System.in.read();

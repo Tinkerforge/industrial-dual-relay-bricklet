@@ -15,9 +15,9 @@ function matlab_example_simple()
     % Turn relays alternating on/off 10 times with 1 second delay
     for i = 0:4
         pause(1);
-        idr.setState(true, false);
+        idr.setValue(true, false);
         pause(1);
-        idr.setState(false, true);
+        idr.setValue(false, true);
     end
 
     input('Press key to exit\n', 's');

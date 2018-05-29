@@ -19,9 +19,9 @@ ipcon.connect HOST, PORT # Connect to brickd
 # Turn relays alternating on/off 10 times with 1 second delay
 for _ in 0..4
   sleep 1
-  idr.set_state true, false
+  idr.set_value true, false
   sleep 1
-  idr.set_state false, true
+  idr.set_value false, true
 end
 
 puts 'Press key to exit'

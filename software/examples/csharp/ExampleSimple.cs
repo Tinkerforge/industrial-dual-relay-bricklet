@@ -21,9 +21,9 @@ class Example
 		for(int i = 0; i < 5; i++)
 		{
 			Thread.Sleep(1000);
-			idr.SetState(true, false);
+			idr.SetValue(true, false);
 			Thread.Sleep(1000);
-			idr.SetState(false, true);
+			idr.SetValue(false, true);
 		}
 
 		Console.WriteLine("Press enter to exit");

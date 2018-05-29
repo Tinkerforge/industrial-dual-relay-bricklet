@@ -18,9 +18,9 @@ Module ExampleSimple
         Dim i As Integer
         For i = 0 To 4
             Thread.Sleep(1000)
-            idr.SetState(True, False)
+            idr.SetValue(True, False)
             Thread.Sleep(1000)
-            idr.SetState(False, True)
+            idr.SetValue(False, True)
         Next i
 
         Console.WriteLine("Press key to exit")

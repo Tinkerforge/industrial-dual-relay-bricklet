@@ -18,9 +18,9 @@ $ipcon->connect(&HOST, &PORT); # Connect to brickd
 for (my $i = 0; $i < 5; $i++)
 {
     sleep(1);
-    $idr->set_state(1, 0);
+    $idr->set_value(1, 0);
     sleep(1);
-    $idr->set_state(0, 1);
+    $idr->set_value(0, 1);
 }
 
 print "Press key to exit\n";

@@ -19,9 +19,9 @@ $ipcon->connect(HOST, PORT); // Connect to brickd
 // Turn relays alternating on/off 10 times with 1 second delay
 for($i = 0; $i < 5; $i++) {
     sleep(1);
-    $idr->setState(TRUE, FALSE);
+    $idr->setValue(TRUE, FALSE);
     sleep(1);
-    $idr->setState(FALSE, TRUE);
+    $idr->setValue(FALSE, TRUE);
 }
 
 echo "Press key to exit\n";

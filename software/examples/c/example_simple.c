@@ -29,9 +29,9 @@ int main(void) {
 	int i;
 	for(i = 0; i < 5; ++i) {
 		millisleep(1000);
-		industrial_dual_relay_set_state(&idr, true, false);
+		industrial_dual_relay_set_value(&idr, true, false);
 		millisleep(1000);
-		industrial_dual_relay_set_state(&idr, false, true);
+		industrial_dual_relay_set_value(&idr, false, true);
 	}
 
 	printf("Press key to exit\n");

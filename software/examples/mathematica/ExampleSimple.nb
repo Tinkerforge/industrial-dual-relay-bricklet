@@ -19,7 +19,7 @@ Notebook[{
    RowBox[{"
 "}],
    RowBox[{"(*", "Turn relays alternating on/off 10 times with 1 second delay", "*)"}],
-   RowBox[{"For", "[", RowBox[{RowBox[{"i", "=", "0"}], ",", RowBox[{"i", "<", "5"}], ",", RowBox[{"i", "++"}], ",", RowBox[{"\[IndentingNewLine]", RowBox[{"Pause", "[", "1", "]"}], ";", "\[IndentingNewLine]", "idr", "@", RowBox[{"SetState", "[", RowBox[{"True", ",", "False"}], "]"}], ";", "\[IndentingNewLine]", RowBox[{"Pause", "[", "1", "]"}], ";", "\[IndentingNewLine]", "idr", "@", RowBox[{"SetState", "[", RowBox[{"False", ",", "True"}], "]"}], "\[IndentingNewLine]"}]}], "]"}],
+   RowBox[{"For", "[", RowBox[{RowBox[{"i", "=", "0"}], ",", RowBox[{"i", "<", "5"}], ",", RowBox[{"i", "++"}], ",", RowBox[{"\[IndentingNewLine]", RowBox[{"Pause", "[", "1", "]"}], ";", "\[IndentingNewLine]", "idr", "@", RowBox[{"SetValue", "[", RowBox[{"True", ",", "False"}], "]"}], ";", "\[IndentingNewLine]", RowBox[{"Pause", "[", "1", "]"}], ";", "\[IndentingNewLine]", "idr", "@", RowBox[{"SetValue", "[", RowBox[{"False", ",", "True"}], "]"}], "\[IndentingNewLine]"}]}], "]"}],
    RowBox[{"
 "}],
    RowBox[{"(*", "Clean up", "*)"}],

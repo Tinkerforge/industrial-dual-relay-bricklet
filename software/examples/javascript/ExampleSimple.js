@@ -19,10 +19,10 @@ ipcon.on(Tinkerforge.IPConnection.CALLBACK_CONNECTED,
         // Turn relays alternating on/off 10 times with 1 second delay
         for(var i = 0; i < 5; ++i) {
             setTimeout(function () {
-                idr.setState(true, false);
+                idr.setValue(true, false);
             }, 2000 * i + 1000);
             setTimeout(function () {
-                idr.setState(false, true);
+                idr.setValue(false, true);
             }, 2000 * i + 2000);
         }
     }

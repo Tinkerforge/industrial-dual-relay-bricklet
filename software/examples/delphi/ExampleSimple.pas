@@ -39,9 +39,9 @@ begin
   { Turn relays alternating on/off 10 times with 1 second delay }
   for i := 0 to 4 do begin
     Sleep(1000);
-    idr.SetState(true, false);
+    idr.SetValue(true, false);
     Sleep(1000);
-    idr.SetState(false, true);
+    idr.SetValue(false, true);
   end;
 
   WriteLn('Press key to exit');

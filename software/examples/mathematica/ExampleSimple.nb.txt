@@ -13,9 +13,9 @@ ipcon@Connect[host,port]
 (*Turn relays alternating on/off 10 times with 1 second delay*)
 For[i=0,i<5,i++,
  Pause[1];
- idr@SetState[True,False];
+ idr@SetValue[True,False];
  Pause[1];
- idr@SetState[False,True]
+ idr@SetValue[False,True]
 ]
 
 (*Clean up*)
