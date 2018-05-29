@@ -31,20 +31,20 @@ static inline uint32_t XMC_GPIO_GetOutputLevel(XMC_GPIO_PORT_t *const port, cons
   return (((port->OUT) >> pin) & 0x1U);
 }
 
-bool relay_get_state(const uint8_t relay) {
-	switch(relay) {
-		case 1: return XMC_GPIO_GetOutputLevel(RELAY0_PIN);
-		case 2: return XMC_GPIO_GetOutputLevel(RELAY1_PIN);
+bool relay_get_value(const uint8_t channel) {
+	switch(channel) {
+		case 0: return XMC_GPIO_GetOutputLevel(RELAY0_PIN);
+		case 1: return XMC_GPIO_GetOutputLevel(RELAY1_PIN);
 		default: break; // Error?
 	}
 
 	return 0;
 }
 
-void relay_set_state(const uint8_t relay, const bool state) {
-	switch(relay) {
-		case 1: state ? XMC_GPIO_SetOutputHigh(RELAY0_PIN) : XMC_GPIO_SetOutputLow(RELAY0_PIN); break;
-		case 2: state ? XMC_GPIO_SetOutputHigh(RELAY1_PIN) : XMC_GPIO_SetOutputLow(RELAY1_PIN); break;
+void relay_set_value(const uint8_t channel, const bool state) {
+	switch(channel) {
+		case 0: state ? XMC_GPIO_SetOutputHigh(RELAY0_PIN) : XMC_GPIO_SetOutputLow(RELAY0_PIN); break;
+		case 1: state ? XMC_GPIO_SetOutputHigh(RELAY1_PIN) : XMC_GPIO_SetOutputLow(RELAY1_PIN); break;
 		default: break; // Error?
 	}
 }
@@ -53,7 +53,7 @@ void relay_tick(Relay *relay) {
 	for(uint8_t i = 0; i < RELAY_NUM; i++) {
 		if(relay->monoflop_running[i]) {
 			if(system_timer_is_time_elapsed_ms(relay->monoflop_start[i], relay->monoflop_time[i])) {
-				relay_set_state(i+1, !relay_get_state(i+1));
+				relay_set_value(i, !relay_get_value(i));
 				relay->monoflop_running[i] = false;
 				relay->monoflop_callback[i] = true;
 			}

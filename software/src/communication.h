@@ -37,68 +37,68 @@ void communication_init(void);
 
 
 // Function and callback IDs and structs
-#define FID_SET_STATE 1
-#define FID_GET_STATE 2
+#define FID_SET_VALUE 1
+#define FID_GET_VALUE 2
 #define FID_SET_MONOFLOP 3
 #define FID_GET_MONOFLOP 4
-#define FID_SET_SELECTED_STATE 6
+#define FID_SET_SELECTED_VALUE 6
 
 #define FID_CALLBACK_MONOFLOP_DONE 5
 
 typedef struct {
 	TFPMessageHeader header;
-	bool relay1;
-	bool relay2;
-} __attribute__((__packed__)) SetState;
+	bool channel0;
+	bool channel1;
+} __attribute__((__packed__)) SetValue;
 
 typedef struct {
 	TFPMessageHeader header;
-} __attribute__((__packed__)) GetState;
+} __attribute__((__packed__)) GetValue;
 
 typedef struct {
 	TFPMessageHeader header;
-	bool relay1;
-	bool relay2;
-} __attribute__((__packed__)) GetState_Response;
+	bool channel0;
+	bool channel1;
+} __attribute__((__packed__)) GetValue_Response;
 
 typedef struct {
 	TFPMessageHeader header;
-	uint8_t relay;
-	bool state;
+	uint8_t channel;
+	bool value;
 	uint32_t time;
 } __attribute__((__packed__)) SetMonoflop;
 
 typedef struct {
 	TFPMessageHeader header;
-	uint8_t relay;
+	uint8_t channel;
 } __attribute__((__packed__)) GetMonoflop;
 
 typedef struct {
 	TFPMessageHeader header;
-	bool state;
+	bool value;
 	uint32_t time;
 	uint32_t time_remaining;
 } __attribute__((__packed__)) GetMonoflop_Response;
 
 typedef struct {
 	TFPMessageHeader header;
-	uint8_t relay;
-	bool state;
+	uint8_t channel;
+	bool value;
 } __attribute__((__packed__)) MonoflopDone_Callback;
 
 typedef struct {
 	TFPMessageHeader header;
-	uint8_t relay;
-	bool state;
-} __attribute__((__packed__)) SetSelectedState;
+	uint8_t channel;
+	bool value;
+} __attribute__((__packed__)) SetSelectedValue;
 
 
 // Function prototypes
-BootloaderHandleMessageResponse set_state(const SetState *data);
-BootloaderHandleMessageResponse get_state(const GetState *data, GetState_Response *response);
+BootloaderHandleMessageResponse set_value(const SetValue *data);
+BootloaderHandleMessageResponse get_value(const GetValue *data, GetValue_Response *response);
 BootloaderHandleMessageResponse set_monoflop(const SetMonoflop *data);
 BootloaderHandleMessageResponse get_monoflop(const GetMonoflop *data, GetMonoflop_Response *response);
-BootloaderHandleMessageResponse set_selected_state(const SetSelectedState *data);
+BootloaderHandleMessageResponse set_selected_value(const SetSelectedValue *data);
 
 // Callbacks
 bool handle_monoflop_done_callback(void);

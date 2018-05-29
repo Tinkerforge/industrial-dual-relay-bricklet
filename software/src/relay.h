@@ -32,11 +32,10 @@ typedef struct {
 	bool monoflop_running[RELAY_NUM];
 	uint32_t monoflop_time[RELAY_NUM];
 	uint32_t monoflop_start[RELAY_NUM];
-
 } Relay;
 
-bool relay_get_state(const uint8_t relay);
-void relay_set_state(const uint8_t relay, const bool state);
+bool relay_get_value(const uint8_t channel);
+void relay_set_value(const uint8_t channel, const bool value);
 
 void relay_tick(Relay *relay);
 void relay_init(Relay *relay);
