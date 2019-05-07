@@ -3,3 +3,6 @@
 
 2018-10-04: 2.0.1 (707fa42)
 - Fix race condition with potential buffer overflow (through bricklib2)
+
+2019-05-07: 2.0.2 (<unknown>)
+- Don't clear monoflop time on monoflop abort to match documentation

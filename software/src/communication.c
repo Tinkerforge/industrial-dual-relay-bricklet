@@ -43,8 +43,6 @@ BootloaderHandleMessageResponse set_value(const SetValue *data) {
 	relay_set_value(0, data->channel0);
 	relay_set_value(1, data->channel1);
 
-	relay.monoflop_time[0] = 0;
-	relay.monoflop_time[1] = 0;
 	relay.monoflop_running[0] = false;
 	relay.monoflop_running[1] = false;
 
@@ -102,7 +100,6 @@ BootloaderHandleMessageResponse set_selected_value(const SetSelectedValue *data)
 
 	relay_set_value(data->channel, data->value);
 
-	relay.monoflop_time[data->channel] = 0;
 	relay.monoflop_running[data->channel] = false;
 
 	return HANDLE_MESSAGE_RESPONSE_EMPTY;
