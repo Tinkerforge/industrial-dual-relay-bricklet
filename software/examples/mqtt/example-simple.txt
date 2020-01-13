@@ -3,13 +3,13 @@
 setup:
 	# Turn relays alternating on/off 10 times with 1 second delay
 	for i in 0 1 2 3 4; do
-	
+
 		wait for 1s 
-	
+
 		publish '{"channel0": true, "channel1": false}' to tinkerforge/request/industrial_dual_relay_bricklet/XYZ/set_value 
-	
+
 		wait for 1s 
-	
+
 		publish '{"channel0": false, "channel1": true}' to tinkerforge/request/industrial_dual_relay_bricklet/XYZ/set_value 
-	
+
 	done
