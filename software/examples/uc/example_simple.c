@@ -1,14 +1,9 @@
-
-
 #include "bindings/hal_common.h"
 #include "bindings/bricklet_industrial_dual_relay.h"
 
 #define UID "XYZ" // Change XYZ to the UID of your Industrial Dual Relay Bricklet
 
 void check(int rc, const char* msg);
-
-
-
 
 TF_IndustrialDualRelay idr;
 
