@@ -2133,7 +2133,7 @@
     (property "Value" "LL4148" (id 1) (at 200.66 110.49 0)
       (effects (font (size 1.016 1.016)))
     )
-    (property "Footprint" "kicad-libraries:SOD-123" (id 2) (at 198.12 110.49 0)
+    (property "Footprint" "kicad-libraries:MiniMelf" (id 2) (at 198.12 110.49 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "Datasheet" "" (id 3) (at 198.12 110.49 0)
@@ -2328,7 +2328,7 @@
     (property "Value" "LL4148" (id 1) (at 200.66 35.56 0)
       (effects (font (size 1.016 1.016)))
     )
-    (property "Footprint" "kicad-libraries:SOD-123" (id 2) (at 198.12 35.56 0)
+    (property "Footprint" "kicad-libraries:MiniMelf" (id 2) (at 198.12 35.56 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "Datasheet" "" (id 3) (at 198.12 35.56 0)
@@ -2600,10 +2600,10 @@
       (reference "D3") (unit 1) (value "blue") (footprint "kicad-libraries:D0603E")
     )
     (path "/00000000-0000-0000-0000-0000590b4fd5"
-      (reference "D4") (unit 1) (value "LL4148") (footprint "kicad-libraries:SOD-123")
+      (reference "D4") (unit 1) (value "LL4148") (footprint "kicad-libraries:MiniMelf")
     )
     (path "/00000000-0000-0000-0000-000059008c09"
-      (reference "D5") (unit 1) (value "LL4148") (footprint "kicad-libraries:SOD-123")
+      (reference "D5") (unit 1) (value "LL4148") (footprint "kicad-libraries:MiniMelf")
     )
     (path "/00000000-0000-0000-0000-00004c5fcf27"
       (reference "P1") (unit 1) (value "CON-SENSOR2") (footprint "kicad-libraries:CON-SENSOR2")
