@@ -6,11 +6,11 @@
 
   (title_block
     (title "Industrial Dual Relay")
-    (date "2017-12-06")
-    (rev "1.0")
+    (date "2023-01-24")
+    (rev "1.2")
     (company "Tinkerforge GmbH")
     (comment 1 "Licensed under CERN OHL v.1.1")
-    (comment 2 "Copyright (©) 2017, B.Nordmeyer <bastian@tinkerforge.com>")
+    (comment 2 "Copyright (©) 2023, B.Nordmeyer <bastian@tinkerforge.com>")
   )
 
   (lib_symbols
@@ -1551,7 +1551,7 @@
     (uuid fdfc02b3-e370-4855-833a-ad5a46a3de77)
   )
 
-  (text "Copyright Tinkerforge GmbH 2017.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.1.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.1. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable\nconditions\n"
+  (text "Copyright Tinkerforge GmbH 2023.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.1.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.1. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable\nconditions\n"
     (at 13.97 195.58 0)
     (effects (font (size 1.016 1.016)) (justify left bottom))
     (uuid 536168d0-71d9-438f-bd96-c797e87dd030)
@@ -1721,7 +1721,7 @@
     (property "Value" "DRILL" (id 1) (at 279.4 156.21 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "kicad-libraries:DRILL_NP" (id 2) (at 279.4 156.21 0)
+    (property "Footprint" "kicad-libraries:DRILL_NP_New" (id 2) (at 279.4 156.21 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "Datasheet" "" (id 3) (at 279.4 156.21 0)
@@ -1738,7 +1738,7 @@
     (property "Value" "DRILL" (id 1) (at 279.4 161.29 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "kicad-libraries:DRILL_NP" (id 2) (at 279.4 161.29 0)
+    (property "Footprint" "kicad-libraries:DRILL_NP_New" (id 2) (at 279.4 161.29 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "Datasheet" "" (id 3) (at 279.4 161.29 0)
@@ -1755,7 +1755,7 @@
     (property "Value" "DRILL" (id 1) (at 270.51 161.29 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "kicad-libraries:DRILL_NP" (id 2) (at 270.51 161.29 0)
+    (property "Footprint" "kicad-libraries:DRILL_NP_New" (id 2) (at 270.51 161.29 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "Datasheet" "" (id 3) (at 270.51 161.29 0)
@@ -1772,7 +1772,7 @@
     (property "Value" "DRILL" (id 1) (at 270.51 156.21 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "kicad-libraries:DRILL_NP" (id 2) (at 270.51 156.21 0)
+    (property "Footprint" "kicad-libraries:DRILL_NP_New" (id 2) (at 270.51 156.21 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "Datasheet" "" (id 3) (at 270.51 156.21 0)
@@ -2692,16 +2692,16 @@
       (reference "U1") (unit 4) (value "XMC1100") (footprint "kicad-libraries:QFN24-4x4mm-0.5mm")
     )
     (path "/00000000-0000-0000-0000-00004c6050a5"
-      (reference "U4") (unit 1) (value "DRILL") (footprint "kicad-libraries:DRILL_NP")
+      (reference "U4") (unit 1) (value "DRILL") (footprint "kicad-libraries:DRILL_NP_New")
     )
     (path "/00000000-0000-0000-0000-00004c6050a2"
-      (reference "U5") (unit 1) (value "DRILL") (footprint "kicad-libraries:DRILL_NP")
+      (reference "U5") (unit 1) (value "DRILL") (footprint "kicad-libraries:DRILL_NP_New")
     )
     (path "/00000000-0000-0000-0000-00004c605099"
-      (reference "U6") (unit 1) (value "DRILL") (footprint "kicad-libraries:DRILL_NP")
+      (reference "U6") (unit 1) (value "DRILL") (footprint "kicad-libraries:DRILL_NP_New")
     )
     (path "/00000000-0000-0000-0000-00004c60509f"
-      (reference "U7") (unit 1) (value "DRILL") (footprint "kicad-libraries:DRILL_NP")
+      (reference "U7") (unit 1) (value "DRILL") (footprint "kicad-libraries:DRILL_NP_New")
     )
   )
 )
